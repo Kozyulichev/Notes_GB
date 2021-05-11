@@ -16,19 +16,19 @@
         tools:text="Название заметки"
         android:lines="1"
         android:textStyle="bold"
-        android:textSize="@dimen/name_size"/>
+        android:textSize="17sp"/>
 
     <TextView
         android:id="@+id/text_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin6"
-        app:layout_constraintStart_toEndOf="@id/date_note"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/name_note"
         tools:text="Текст заметки "
-        android:ems="17"
+        android:ems="8"
         android:lines="1"
-        android:textColor="#B8B8B8"/>
+        />
 
     <TextView
         android:id="@+id/date_note"

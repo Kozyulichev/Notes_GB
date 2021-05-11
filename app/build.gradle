@@ -38,6 +38,7 @@ dependencies {
 
     //noinspection GradleDependency
     implementation "androidx.fragment:fragment:$fragment_version"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

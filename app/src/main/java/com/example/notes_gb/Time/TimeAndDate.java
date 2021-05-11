@@ -19,7 +19,7 @@ public class TimeAndDate {
         TimeZone timeZone;
         timeZone = TimeZone.getTimeZone(TIMEZONE);
         DateFormat dateFormat;
-        dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         dateFormat.setTimeZone(timeZone);
         dateTime = dateFormat.format(date);
     }

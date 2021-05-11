@@ -76,8 +76,6 @@ public class Fragment_note extends Fragment {
             TextView nameNote = noteView.findViewById(R.id.name_note);
             nameNote.setText(note.getName());
 
-            TextView numberNote = noteView.findViewById(R.id.number_note);
-            numberNote.setText("№" + note.getSerialNumber());
 
             TextView content = noteView.findViewById(R.id.text_note);
             content.setText(note.getContent());
