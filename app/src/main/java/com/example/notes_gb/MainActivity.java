@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements Fragment_note.OnN
 
     private void initToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Заметки");
         setSupportActionBar(toolbar);
     }
 
