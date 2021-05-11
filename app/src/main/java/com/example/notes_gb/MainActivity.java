@@ -1,22 +1,22 @@
 package com.example.notes_gb;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.ListFragment;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.example.notes_gb.domain.Note;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements Fragment_note.OnNoteClicked {
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements Fragment_note.OnN
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.app_bar_main);
         startActivity();
 
 
@@ -37,11 +37,12 @@ public class MainActivity extends AppCompatActivity implements Fragment_note.OnN
 
     }
 
-    private void initToolBar() {
+    public void initToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Заметки");
         setSupportActionBar(toolbar);
     }
+
+
 
 
 
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements Fragment_note.OnN
         if (isLandscape) {
             fragmentManager.beginTransaction()
                     .replace(R.id.details_notes, Details_notes.newInstance(note))
+                    .addToBackStack(null)
                     .commit();
         } else {
             fragmentManager.beginTransaction()

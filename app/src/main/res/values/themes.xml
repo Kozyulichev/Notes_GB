@@ -13,11 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    
+
     <style name="Theme.Notes_GB.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.Notes_GB.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar"/>
     <style name="Theme.Notes_GB.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+    <style name="Theme.Notes_GB.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Notes_GB.NoActionBar.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Notes_GB.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
